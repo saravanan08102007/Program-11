@@ -1,3 +1,4 @@
+DROP DATABASE IF EXISTS CollegeDB;
 CREATE DATABASE CollegeDB;
 USE CollegeDB;
 
@@ -7,8 +8,7 @@ CREATE TABLE Student (
     DepartmentID INT
 );
 
-INSERT INTO Student (StudentID, StudentName, DepartmentID)
-VALUES
+INSERT INTO Student VALUES
 (1001, 'Arun', 10),
 (1002, 'Priya', 20),
 (1003, 'Kumar', 10);
@@ -18,8 +18,7 @@ CREATE TABLE Department (
     DepartmentName VARCHAR(100)
 );
 
-INSERT INTO Department (DepartmentID, DepartmentName)
-VALUES
+INSERT INTO Department VALUES
 (10, 'Computer Science'),
 (20, 'Mathematics');
 
@@ -28,8 +27,7 @@ CREATE TABLE Course (
     CourseName VARCHAR(100)
 );
 
-INSERT INTO Course (CourseID, CourseName)
-VALUES
+INSERT INTO Course VALUES
 (201, 'Database Systems'),
 (202, 'Data Structures'),
 (203, 'Mathematics');
@@ -40,8 +38,7 @@ CREATE TABLE Enrollment (
     CourseID INT
 );
 
-INSERT INTO Enrollment (EnrollmentID, StudentID, CourseID)
-VALUES
+INSERT INTO Enrollment VALUES
 (1, 1001, 201),
 (2, 1001, 202),
 (3, 1002, 203),
